@@ -456,12 +456,12 @@ var рпг = AreaPlayerTriggerService.Get("рпг");
 рпг.Enable = true;  
 рпг.OnEnter.Add(function(player, area){
 
-if(player.Properties.Scores.Value >= 300000){ 
-player.Ui.Hint.Value = "куплены гренаты"; 
-player.Properties.Scores.Value -= 300000; 
+if(player.Properties.Scores.Value >= 299999){ 
+player.Ui.Hint.Value = "Гранаты Твои"; 
+player.Properties.Scores.Value -= 299999; 
 player.Inventory.Explosive.Value = true;
 }else{ 
-player.Ui.Hint.Value = "300.000 ⛁⛀ = гранаты а у тя: " + player.Properties.Scores.Value; 
+player.Ui.Hint.Value = "299999 Рублей = стоят гранаты, ваш баланс: " + player.Properties.Scores.Value; 
 } 
 });
 
@@ -470,12 +470,12 @@ var нож = AreaPlayerTriggerService.Get("нож");
 нож.Enable = true; 
 нож.OnEnter.Add(function(player, area){
 
-if(player.Properties.Scores.Value >= 50000){ 
+if(player.Properties.Scores.Value >= 49000){ 
 player.Ui.Hint.Value = "куплен нож"; 
-player.Properties.Scores.Value -= 50000; 
+player.Properties.Scores.Value -= 49000; 
 player.Inventory.Melee.Value = true;
 }else{
-player.Ui.Hint.Value = "50.000 ⛁⛀ = нож а у тя: " + player.Properties.Scores.Value; 
+player.Ui.Hint.Value = "49000 рублей  = Стоит нож, ваш баланс: " + player.Properties.Scores.Value; 
 } 
 });
 
@@ -484,13 +484,13 @@ var блоки = AreaPlayerTriggerService.Get("блоки");
 блоки.Enable = true;
 блоки.OnEnter.Add(function(player, area){
 
-if(player.Properties.Scores.Value >= 1000000){ 
+if(player.Properties.Scores.Value >= 600000){ 
 player.Ui.Hint.Value = "куплены блоки"; 
-player.Properties.Scores.Value -= 1000000; 
+player.Properties.Scores.Value -= 600000; 
 player.inventory.Build.Value = true;
 player.Build.BlocksSet.Value = BuildBlocksSet.Blue;
 }else{ 
-player.Ui.Hint.Value = "1.000.000 ⛁⛀ = блоки а у тя: " + player.Properties.Scores.Value; 
+player.Ui.Hint.Value = "600000 Рублей = Разрешение на стройку и материалы, ваш баланс: " + player.Properties.Scores.Value; 
 } 
 });
 
@@ -499,13 +499,13 @@ var дигл = AreaPlayerTriggerService.Get("дигл");
 дигл.Enable = true;  
 дигл.OnEnter.Add(function(player, area){
 
-if(player.Properties.Scores.Value >= 150000){
+if(player.Properties.Scores.Value >= 130000){
 player.Ui.Hint.Value = "куплено запасное оружие"; 
-player.Properties.Scores.Value -= 150000; 
+player.Properties.Scores.Value -= 130000; 
 player.Inventory.Secondary.Value = true;
 }else{
 
-player.Ui.Hint.Value = "150.000 ⛁⛀ = дигл а у тя: " + player.Properties.Scores.Value;
+player.Ui.Hint.Value = "130000 рублей = Стоит Пистолетик, Ваш баланс : " + player.Properties.Scores.Value;
 } 
 });
 
@@ -519,7 +519,7 @@ player.Ui.Hint.Value = "куплен пулик";
 player.Properties.Scores.Value -= 250000; 
 player.Inventory.Main.Value = true; 
 }else{ 
-player.Ui.Hint.Value = "250.000 ⛁⛀ = пулик а у тя: " + player.Properties.Scores.Value;
+player.Ui.Hint.Value = "250000 рублей = стоит основное оружие, ваш баланс: " + player.Properties.Scores.Value;
 } 
 });
 var ин = AreaPlayerTriggerService.Get("ин");
