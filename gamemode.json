@@ -1,0 +1,57 @@
+{
+  "Name": Жопа
+  "Description": "пися",
+  "StartClientVersion": 334,
+  "MapLists": [
+    {
+      "MapListId": 12042,
+      "Name": "Карты Для режима"
+    }
+  ],
+  "Parameters": {
+    "Bool": [
+      {
+        "Name": "Damage",
+        "DisplayName": "GmParams/Damage"
+      },
+      {
+        "Name": "PartialDesruction",
+        "DisplayName": "GmParams/PartialDesruction"
+      },
+      {
+        "Name": "LoosenBlocks",
+        "DisplayName": "GmParams/LoosenBlocks"
+      },
+      {
+        "Name": "Гей",
+        "DisplayName": "Teams/Red",
+        "Default": true
+      },
+      {
+        "Name": "Писи",
+        "DisplayName": "Teams/Blue",
+        "Default": true
+      },
+      {
+        "Name": "BlueHasNothing",
+        "DisplayName": "GmParams/BlueHasNothing"
+      },
+      {
+        "Name": "RedHasNothing",
+        "DisplayName": "GmParams/RedHasNothing"
+      }, 
+      {
+        "Name": "FloodFill",
+        "DisplayName": "GmParams/FloodFill"
+      },
+      {
+        "Name": "FillQuad",
+        "DisplayName": "GmParams/FillQuad"
+      },
+      {
+        "Name": "RemoveQuad",
+        "DisplayName": "GmParams/RemoveQuad"
+      }
+    ]
+  }
+}
