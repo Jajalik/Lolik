@@ -254,6 +254,21 @@ var мани3 = AreaPlayerTriggerService.Get("мани3");
 player.Properties.Scores.Value += 500;
 });
 
+var fly = AreaPlayerTriggerService.Get("fly");  
+fly.Tags = ["fly"];
+fly.Enable = true; 
+fly.OnEnter.Add(function(player, area){
+
+if(player.Properties.Scores.Value >= 120000){ 
+player.Ui.Hint.Value = "куплен нож"; 
+player.Properties.Scores.Value -= 120000; 
+player.Build.FlyEnable.Value = true;
+}else{
+player.Ui.Hint.Value = "120000 рублей  = Стоит флай, ваш баланс: " + player.Properties.Scores.Value; 
+} 
+});
+
+
 var ban = AreaPlayerTriggerService.Get("ban"); 
 ban.Tags = ["ban"]; 
 ban.Enable = true; 
