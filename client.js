@@ -235,6 +235,7 @@ var мани = AreaPlayerTriggerService.Get("мани");
 мани.Enable = true; 
 мани.OnEnter.Add(function (player, area) {
 
+player.Ui.Hint.Value = "Ты начал попрошайничать, Максим Ыыы Дал тебе Сто рублей";
 player.Properties.Scores.Value += 100;
 });
 
@@ -243,6 +244,7 @@ var мани2 = AreaPlayerTriggerService.Get("мани2");
 мани2.Enable = true; 
 мани2.OnEnter.Add(function (player, area) {
 
+player.Ui.Hint.Value = "Ты начал Работать Грузчиком, Ты отнес ящик и началтрик заплатил тебе 100 рублей";
 player.Properties.Scores.Value += 150;
 });
 
@@ -254,13 +256,40 @@ var мани3 = AreaPlayerTriggerService.Get("мани3");
 player.Properties.Scores.Value += 500;
 });
 
+
+var манис = AreaPlayerTriggerService.Get("манис"); 
+манис.Tags = ["манис"]; 
+манис.Enable = true; 
+манис.OnEnter.Add(function (player, area) {
+
+player.Ui.Hint.Value = "Ты начал варить наркотики и продавать их";
+player.Properties.Scores.Value += 279;
+});
+
+var мани3 = AreaPlayerTriggerService.Get("пр"); 
+пр.Tags = ["пр"]; 
+пр.Enable = true; 
+пр.OnEnter.Add(function (player, area) {
+
+player.Ui.Hint.Value = "ты вошел в притон, если тебя увидит админ он закроет некоторые работы и притон ";
+});
+
+var манит = AreaPlayerTriggerService.Get("манит"); 
+манит.Tags = ["манит"]; 
+манит.Enable = true; 
+манит.OnEnter.Add(function (player, area) {
+
+player.Ui.Hint.Value = "ты начал торговать своими трусами";
+player.Properties.Scores.Value += 155;
+});
+
 var fly = AreaPlayerTriggerService.Get("fly");  
 fly.Tags = ["fly"];
 fly.Enable = true; 
 fly.OnEnter.Add(function(player, area){
 
 if(player.Properties.Scores.Value >= 120000){ 
-player.Ui.Hint.Value = "куплен нож"; 
+player.Ui.Hint.Value = "Флай Куплен"; 
 player.Properties.Scores.Value -= 120000; 
 player.Build.FlyEnable.Value = true;
 }else{
