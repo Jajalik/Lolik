@@ -266,7 +266,7 @@ player.Ui.Hint.Value = "Ты начал варить наркотики и пр�
 player.Properties.Scores.Value += 279;
 });
 
-var мани3 = AreaPlayerTriggerService.Get("пр"); 
+var пр = AreaPlayerTriggerService.Get("пр"); 
 пр.Tags = ["пр"]; 
 пр.Enable = true; 
 пр.OnEnter.Add(function (player, area) {
