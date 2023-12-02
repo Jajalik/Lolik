@@ -59,6 +59,29 @@ Teams.Get("Blue").Inventory.BuildInfinity.Value = false;
 Teams.Get("Blue").Build.BlocksSet.Value = BuildBlocksSet.Blue;
         }
 }
+LeaderBoard.PlayerLeaderBoardValues = [
+	{
+		Value: "rid",
+		DisplayName: "<B>r</B>аid",
+		ShortDisplayName: "<B>r</B>id"
+	},
+	{
+		Value: "banned",
+		DisplayName: "<B>z</B>абанен",
+		ShortDisplayName: "<B>z</B>абанен"
+	}
+];
+
+Ui.GetContext().TeamProp1.Value = {
+	Team: "better", Prop: "hint"
+};
+Ui.GetContext().TeamProp2.Value = {
+	Team: "better", Prop: "hint"
+};
+Teams.Get("better").Properties.Get("hint").Value = "<B><color=#483D8B>Better!</color> EDITOR</B><i>\n\nby just_qstn</i>";
+p_team.Spawns.SpawnPointsGroups.Add(1);
+b_team.Spawns.SpawnPointsGroups.Add(2);
+
 
 // ��������� ���� � ������� �� �������
 Teams.OnRequestJoinTeam.Add(function(player,team){team.Add(player);
